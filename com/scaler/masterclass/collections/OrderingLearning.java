@@ -1,7 +1,7 @@
-package com.scaler.masterclass;
+package com.scaler.masterclass.collections;
 
-import com.scaler.masterclass.pojo.Student;
-import com.scaler.masterclass.pojo.StudentPercentageAgeComparator;
+import com.scaler.masterclass.collections.pojo.Student;
+import com.scaler.masterclass.collections.pojo.StudentPercentageAgeComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +23,7 @@ public class OrderingLearning {
         Collections.sort(studentList, new StudentPercentageAgeComparator());
 
         for(Student student : studentList) {
-            System.out.println(student.getName());
+            System.out.println(student.name);
         }
     }
 }

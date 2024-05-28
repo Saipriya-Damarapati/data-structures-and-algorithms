@@ -1,4 +1,4 @@
-package com.scaler.masterclass;
+package com.scaler.masterclass.collections;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

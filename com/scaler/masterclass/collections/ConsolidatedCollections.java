@@ -1,8 +1,8 @@
-package com.scaler.masterclass;
+package com.scaler.masterclass.collections;
 
-import com.scaler.masterclass.pojo.Student;
-import com.scaler.masterclass.pojo.StudentPercentageAgeComparator;
-import com.scaler.masterclass.pojo.StudentPercentageComparator;
+import com.scaler.masterclass.collections.pojo.Student;
+import com.scaler.masterclass.collections.pojo.StudentPercentageAgeComparator;
+import com.scaler.masterclass.collections.pojo.StudentPercentageComparator;
 
 import java.util.*;
 

@@ -1,16 +1,14 @@
-package com.scaler.masterclass;
+package com.scaler.masterclass.collections;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 
+// List is an array which is dynamic and growable
 public class ListLearning {
 
     public static void main(String[] args) {
 
-        //Collection
-        //Collections
-
-        // List is an array which is dynamic and growable
+        //Collection is an interface
+        //Collections is a class
 
         // arraylist is not thread safe : not synchronized
         // every time that memory is full, size of the array list is doubled and every element is copied into newly created array list.

@@ -1,4 +1,4 @@
-package com.scaler.masterclass;
+package com.scaler.masterclass.collections;
 
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;

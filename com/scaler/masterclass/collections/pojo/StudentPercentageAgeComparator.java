@@ -1,4 +1,4 @@
-package com.scaler.masterclass.pojo;
+package com.scaler.masterclass.collections.pojo;
 
 import java.util.Comparator;
 

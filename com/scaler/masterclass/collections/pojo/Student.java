@@ -1,4 +1,4 @@
-package com.scaler.masterclass.pojo;
+package com.scaler.masterclass.collections.pojo;
 
 // Comparable helps to get natural ordering
 // there can be only one natural ordering

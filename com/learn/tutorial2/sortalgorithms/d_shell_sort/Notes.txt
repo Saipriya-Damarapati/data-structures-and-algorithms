@@ -1,1 +1,71 @@
+Shell Sort
+------------------
+* Variation of insertion sort
+* Insertion sort chooses which element to insert using a gap(1), however, shell sort starts out using a larger gap value
+* As algorithm runs, the gap is reduced
+* Goal is to reduce the amount of shifting involved in insertion sort
+* The last gap value is always 1, which is then equivalent to insertion sort
+* So, the algorithm does some preliminary work (using gap values greater than 1), and then becomes insertion sort
+* By the time, we get to insertion sort, the array has been partially sorted, so there is less shifting required.
 
+* But, what can be a good gap value? https://en.wikipedia.org/wiki/Shellsort#Gap_sequences
+* gap sequence chosen determines the time complexity
+* One of the commonly used gap sequence is Knuth sequence
+
+    * Gap is calculated using ((3 to the power k) - 1) / 2
+    * We set k based on the length of the array
+    * Gap has to be as close as the length of the array we want to sort, without being greater than the length
+
+    |===============|===========================|
+    |       k       |       Gap (interval)      |
+    |---------------|---------------------------|
+    |       1       |           1               |
+    |       2       |           4               |
+    |       3       |           13              |
+    |       4       |           40              |
+    |       5       |           121             |
+    |===============|===========================|
+
+    * Suppose the length of the array to be sorted is 20, we have to choose the gap value of 13 with k = 3
+
+    * For simplicity, let us keep the gap value to array.length divided by 2 in our implementation
+    * On each iteration, we will divide the gap value by 2, to get the next gap value.
+    * Suppose, the length of the array is 7, gap will be initialized to 3, then in next iteration, gap will be equal to 1 performing the insertion sort.
+
+    |======|=====|=====|=====|=====|=====|=====|
+    |   0  |  1  |  2  |  3  |  4  |  5  |  6  |
+    |======|=====|=====|=====|=====|=====|=====|
+    |  20  | 35  | -15 |  7  |  55 |  1  | -22 |
+    |======|=====|=====|=====|=====|=====|=====|
+
+* Initially,
+    i = gap = 3 (for an array of 7 elements)
+    j = i = 3
+    newElement = array[i]
+
+* Algorithm:
+    Step 1: For i = gap, until the length of the array, newElement = array[i]
+    Step 2: For j = i; until start of the array or until array[j-gap] > newElement,
+            keep shifting array[j-gap] to array[j] ;
+            perform j = j-gap (does this right to left shifting operation based on gap)
+    Step 3: Once insertion position is identified, either by comparison or start of array, insert the newElement
+    Step 4: Repeat the steps 1,2,3 for every gap until gap=1 is reached
+
+    for(int gap = array.length / 2; gap > 0; gap = gap/2) {
+
+        for(int i = gap; i < array.length; i++) {
+            int newElement = array[i];
+            int j;
+            for(j = i; j >= gap && array[j - gap] > newElement; j = j-gap) {
+                array[j] = array[j - gap];
+            }
+            array[j] = newElement;
+        }
+    }
+
+* Performance:
+    > In place algorithm
+    > Difficult to nail down the time complexity, because it depends on gap.
+    > Worst case is O(n square), but it can perform much better than that
+    > Does not require so much shifting as in insertion sort, so it usually performs better
+    > This is unstable sort algorithm - relative order of duplicate elements is not preserved

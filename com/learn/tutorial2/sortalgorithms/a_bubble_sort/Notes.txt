@@ -1,14 +1,16 @@
 Bubble Sort
 ------------------
+* Works based on partitions in the array, sorted and unsorted partition.
+* Initially entire array is unsorted, after every iteration, sortedPartition grows and unsortedPartition reduces
 * In place algorithm - Array is sorted with in itself, and no copy of array or another object is created
-* O(n square) time complexity - performance degrades quickly with the increase in number of elements
+* O(n square) quadratic time complexity - performance degrades quickly with the increase in number of elements
 * 100 steps to sort 10 items, 10000 steps to sort 100 items and so on
 
 * Initially,
     unsortedPartitionIndex = 6 (which is the last index of unsorted partition)
     i = 0 (index used to traverse the array from left to right)
 
-* Algorithm
+* Algorithm (default: right bubble sort)
     Step 1:     for every element, compare it with next element
     Step 2:     if value of next element is less than the value of current element, then swap the two elements
     Step 3:     repeat the process until all the elements are sorted,

@@ -1,0 +1,34 @@
+Selection Sort:
+------------------
+* Works based on partitions in the array, sorted and unsorted partition.
+* Initially entire array is unsorted, after every iteration, sortedPartition grows and unsortedPartition reduces
+* Works similar to bubble sort - which is in place algorithm and traversal is also same
+** But, we traverse the array to find the largest element, and swap the largest element with the element in lastUnsortedIndex
+* Called selection sort, because in each traversal we are selecting the largest element
+* O(n square) quadratic time complexity - performance degrades quickly with the increase in number of elements
+* 100 steps to sort 10 items, 10000 steps to sort 100 items and so on
+* Doesn't require as much swapping as in bubble sort
+* This is unstable sort algorithm - relative order of duplicate elements is not preserved
+
+
+* Initially,
+    unsortedPartitionIndex = 6 (which is the last index of unsorted partition)
+    largest = 0 (assume the element at the index 0 is the largest), and we start comparing from the next element onwards
+    i = 1 (index used to traverse the array from left to right)
+
+* Algorithm (default: right selection sort)
+    Step 1: Traverse the array to find out the largest element index in the array
+    Step 2: Compare the largest element with element in the unsortedPartitionIndex
+    Step 3: If the largest element is greater than the element in unsortedPartitionIndex, swap them
+
+    Step 4: Repeat the step until all the elements are sorted and the unsortedPartitionIndex is 0
+
+        for(u = lastUnsortedIndex; u > 0; u--) {
+            for (i = 1; i <= u; i++) {
+                if (a[i] > a[largest]) {
+                    largest = i
+                }
+            }
+            swap(a[lastUnsortedIndex], a[largest])
+            // decrement u in for loop; for one iteration, the elements at the position after u are sorted
+        }

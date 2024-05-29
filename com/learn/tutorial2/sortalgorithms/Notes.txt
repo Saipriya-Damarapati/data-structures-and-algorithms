@@ -1,0 +1,8 @@
+Stable vs Unstable sort
+------------------------------
+* Concept while dealing with duplicate elements in the array
+
+* Stable sort: Relative order of duplicate elements is preserved even after sorting; eg. stable_sort.png
+* Unstable sort: Relative order of duplicate elements is not preserved after sorting; eg. unstable_sort.png
+
+* Bubble sort is a stable sort, because we are not swapping the two adjacent elements when they are actually equal

@@ -1,0 +1,29 @@
+Insertion Sort
+------------------
+* Works based on partitions in the array, sorted and unsorted partition.
+* Initially entire array is unsorted, after every iteration, sortedPartition grows from left to right
+* O(n square) quadratic time complexity - performance degrades quickly with the increase in number of elements
+* 100 steps to sort 10 items, 10000 steps to sort 100 items and so on
+* This is stable sort algorithm - relative order of duplicate elements is preserved
+
+* Initially,
+    firstUnsortedIndex = 1 (the first index of unsorted partition)
+    i = 0 (index used to traverse the sorted partition from right to left)
+    newElement = array[firstUnsortedIndex] - this is the value we need to insert into the sorted partition
+
+* Algorithm:
+    Step 1: Traverse the array starting from the firstUnsortedIndex, get the newElement
+    Step 2: Now we have to insert this newElement into sorted partition at correct position
+    Step 3: Traverse the sorted partition from right to left,
+            when an element less than or equal to newElement (or start of the array is reached) is found, insert the new Element to the right of it
+            until then shift the element at position i to i+1
+
+    Step 4: Repeat the step until all the elements are sorted and the firstUnsortedIndex and i are equal to length of the array
+
+        for(unsortedIndex = 1; unsortedIndex < array.length; unsortedIndex++) {
+            newElement = array[unsortedIndex]
+            for(sortedIndex = unsortedIndex; sortedIndex > 0 && array[sortedIndex - 1] > newElement; sortedIndex--) {
+                array[sortedIndex] = array[sortedIndex - 1] // copy the value to the next index until the value less than newElement is reached or start of array is reached
+            }
+            array[sortedIndex] = newElement
+        }

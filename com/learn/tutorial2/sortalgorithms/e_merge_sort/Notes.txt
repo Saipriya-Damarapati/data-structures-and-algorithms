@@ -1,0 +1,31 @@
+Merge Sort
+------------
+* Divide and Conquer algorithm
+* Recursive algorithm
+* Two phases: Splitting and Merging
+* Splitting is a preparatory phase which will help in faster sorting during merging phase
+* Splitting is logical based on the indices and we do not create new arrays
+* Merging phase is not in place, it will create temporary arrays
+
+Splitting Phase
+--------------------
+* Start with an unsorted array
+* Divide the array into two unsorted arrays which are unsorted.
+    The first array is the left array and the second array is the right array
+* Split the left and right arrays into two arrays each
+* Keep splitting until all the arrays have only one element each, these arrays are sorted
+* As seen in insertion sort initialization, one element arrays means that they are always sorted
+
+Merging Phase
+--------------------
+* Merge every left/right pair of siblings into a sorted array
+* After first merge, we will have a bunch of 2-element sorted arrays
+* Then merge those sorted arrays (left/right siblings) to end up with a bunch of 4-element sorted arrays
+* Repeat the process until you have a single sorted array
+* Not in place, uses temporary arrays
+
+Performance
+----------------------
+* Not an in-place algorithm at the time of merging
+* Time complexity - O(n logn) - base 2 , we are repeatedly dividing the array in half during splitting phase
+* This is a stable algorithm

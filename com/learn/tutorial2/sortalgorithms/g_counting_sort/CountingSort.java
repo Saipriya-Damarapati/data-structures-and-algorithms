@@ -7,7 +7,6 @@ public class CountingSort {
         System.out.println("Before Sorting : ");
         display(array);
 
-
         countingSort(array, findMin(array), findMax(array));
 
         System.out.println("After Sorting : ");

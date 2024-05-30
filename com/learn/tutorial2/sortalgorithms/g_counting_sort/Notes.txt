@@ -13,6 +13,12 @@ Algorithm:
 * Use the counting array to track how many of each value are in the input array - Counting phase
 * Use the counts in the counting array, write the values in sorted order to the input array
 
+Example:
+             Index :     0  1   2   3   4   5   6   7   8   9   10  11  12
+    Before Sorting :     2  5   9   8   2   8   7   10  4   3   0   3   0
+    Counting Array :     2  0   2   2   1   1   0   1   2   1   1
+    After Sorting  :     0  0   2   2   3   3   4   5   7   8   8   9   10
+
 Performance:
 * Not an in-place algorithm - create a counting array
 * O(n) - can achieve this, because we are making the assumptions about the dtaa we are sorting

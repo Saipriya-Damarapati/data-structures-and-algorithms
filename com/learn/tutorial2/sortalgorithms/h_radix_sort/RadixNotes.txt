@@ -1,0 +1,27 @@
+Radix Sort
+-----------
+* Makes assumptions about the data
+* ## Data must have same radix and width
+* Because of this, data must be integers or strings
+* ## Sort based on each individual digit or position
+* ## Start at the right most position
+* ## Must use a stable sort algorithm at each stage
+
+* radix of decimal integers is always 10
+* radix of alphabet is always 26
+* radix of binary numbers is always 2
+
+Example:
+Input Array:                4725    4586    1330    8792    1594    5729
+Based on 1s position:       1330    8792    1594    4725    4586    5729
+Based on 10s position:      4725    5729    1330    4586    8792    1594
+Based on 100s position:     1330    4586    1594    4725    5729    8792
+Based on 1000s position:    1330    1594    4586    4725    5729    8792
+
+Performance:
+* Counting sort is often used as sort algorithm for radix sort - but it must be a stable counting sort
+* We can achieve this in O(n) - because we are making assumptions about the data
+* Even so, it often runs slower than O(n logn) algorithms because of the overhead involved
+* In place depends on which sorting algorithm you use
+* Stable algorithm
+* Raidx sort works only when the underlying sort algorithm is stable

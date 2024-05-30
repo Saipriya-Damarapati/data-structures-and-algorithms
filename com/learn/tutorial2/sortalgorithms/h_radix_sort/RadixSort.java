@@ -17,7 +17,7 @@ public class RadixSort {
     private static void radixSort(int[] array, int width, int radix) {
         for(int i = 1; i <= width; i++) {
             performRadixSort(array, i, radix); // to get 'i'th position from the right
-            System.out.println("Sorted array based " + i + "th position from the right: ");
+            System.out.print("Sorted array based " + i + "th position from the right: ");
             display(array);
         }
     }
@@ -25,32 +25,32 @@ public class RadixSort {
     private static void performRadixSort(int[] array, int position, int radix) {
         int[] countingArray = new int[radix];
 
-        for(int i = 0; i < array.length; i++) {
-            countingArray[getDigit(array[i], position)]++;
+        for(int ele : array) {
+            countingArray[getDigit(ele, position, radix)]++;
         }
 
         int[] adjustedCountingArray = new int[radix];
         int sum = 0;
-        for(int i = 0; i < countingArray.length; i++) {
+        for(int i = 1; i < countingArray.length; i++) {
             sum = sum + countingArray[i];
             adjustedCountingArray[i] = sum;
         }
 
         int[] tmp = new int[array.length];
         for(int k = array.length - 1; k >= 0; k--) {
-            tmp[--adjustedCountingArray[getDigit(array[k], position)]] = array[k];
+            tmp[--adjustedCountingArray[getDigit(array[k], position, radix)]] = array[k];
         }
         System.arraycopy(tmp, 0, array, 0, array.length);
     }
 
-    private static int getDigit(int number, int position) {
+    private static int getDigit(int number, int position, int radix) {
 
         if(position == 1) {
-            return number % 10;
+            return number % radix;
         }
 
-        number = number / 10;
-        return getDigit(number, --position);
+        number = number / radix;
+        return getDigit(number, --position, radix);
     }
 
     private static void display(int[] a) {

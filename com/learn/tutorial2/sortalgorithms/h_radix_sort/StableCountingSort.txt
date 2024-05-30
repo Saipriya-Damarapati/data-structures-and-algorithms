@@ -9,6 +9,7 @@ Stable Counting Sort
 * Requires extra steps on counting sort
 * Can calculate where values should be written back to the original array
 * Writing the values into the array in backwards order ensures stability
+* Not in place algorithm - uses tmpArray
 
 * In counting sort, we will create a counting array of length 10,
     because radix is 10 for decimal numbers,
@@ -71,6 +72,7 @@ Algorithm after counting:
     |   --adjustedCountArray    |   1       |   3       |   0       |   5       |   4       |   2       |
     |   position in tmp array   |   1       |   3       |   0       |   5       |   4       |   2       |
     |===================================================================================================|
+                * - decremented when k = 5 and when k = 2 respectively
 
 * This works because we traverse the input array from right to left, and we write duplicate values to tmp array from right to left
 * If we know that duplicate values will go into positions 3 and 4,
@@ -78,6 +80,3 @@ Algorithm after counting:
     and the left most value into position 3
 * This preserves the relative positioning of duplicate elements
 * By adjusting the counting array after initial pass, we can map values to indices in the tmp array
-
-
-    * - decremented when k = 5 and when k = 2 respectively

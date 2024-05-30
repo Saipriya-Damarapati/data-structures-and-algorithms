@@ -1,0 +1,2 @@
+Modify the merge sort algorithm so that it sorts the integers in the descending order
+Use the usual example

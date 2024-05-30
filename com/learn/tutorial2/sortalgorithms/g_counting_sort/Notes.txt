@@ -1,2 +1,20 @@
 Counting Sort
 -------------------
+* Makes assumptions about the data
+* Don't use any comparisons
+* Cunts the number of occurrences of each value
+* Only works with non-negative discrete values (can't work with floats, strings)
+* Values must be within a specific range
+
+Algorithm:
+* Assume we have values between 1 and 10 inclusive
+* We have 10 possible values, so we create a counting array of length 10
+* Traverse the input array from left to right
+* Use the counting array to track how many of each value are in the input array - Counting phase
+* Use the counts in the counting array, write the values in sorted order to the input array
+
+Performance:
+* Not an in-place algorithm - create a counting array
+* O(n) - can achieve this, because we are making the assumptions about the dtaa we are sorting
+* If we want the sort to be stable, we have to do some extra steps, will be discussed in next section
+* Range has to be nearly same as the number of elements we need to sort

@@ -1,7 +1,7 @@
 package com.learn.tutorial3.lists.c_singly_linked_list;
 
 import com.learn.tutorial3.pojo.Employee;
-import com.learn.tutorial3.lists.c_singly_linked_list.pojo.EmployeeLinkedList;
+import com.learn.tutorial3.lists.c_singly_linked_list.impl.EmployeeLinkedList;
 
 public class SinglyLinkedListImpl {
 

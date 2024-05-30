@@ -27,4 +27,5 @@ Performance:
 * Not so good for insertion at any position except at the end, elements has to be shifted
 * Not so good for deletion or removals, elements has to be shifted
 * Not good for accessing the elements when we do not have the index
-* In case, array list is structurally modified after iterators are created, then they throw ConcurrentModificationException
+* In case, array list is structurally modified after iterators are created,
+    then they throw ConcurrentModificationException

@@ -1,0 +1,3 @@
+Implement a method in IntegerLinkedListthat inserts value in sorted order
+lower values should appear first in the list ( to be closer to the head)
+If we insert 4, 2, 1, 5, then list should look like HEAD -> 1 -> 2 -> 4 -> 5 -> null

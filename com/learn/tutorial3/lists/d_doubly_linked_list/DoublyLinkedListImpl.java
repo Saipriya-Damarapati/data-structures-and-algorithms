@@ -1,6 +1,6 @@
 package com.learn.tutorial3.lists.d_doubly_linked_list;
 
-import com.learn.tutorial3.lists.d_doubly_linked_list.pojo.EmployeeDoublyLinkedList;
+import com.learn.tutorial3.lists.d_doubly_linked_list.impl.EmployeeDoublyLinkedList;
 import com.learn.tutorial3.lists.d_doubly_linked_list.pojo.EmployeeNode;
 import com.learn.tutorial3.pojo.Employee;
 

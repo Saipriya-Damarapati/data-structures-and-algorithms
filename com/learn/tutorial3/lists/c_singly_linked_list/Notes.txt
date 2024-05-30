@@ -17,3 +17,11 @@ Linked List:
     # Assign head to the second node
     # Return 'removedNode'
 * As long as insertions and deletions are done at the front of the list, they are in constant time
+-------------------------------------------------------------------------------------------------------
+Circular Linked List
+----------------------
+* Is a variation of singly linked list
+* Last node of the list points to the first node of the list
+* In other words, tail points to the head
+* Traversal can be done starting from any node
+-------------------------------------------------------------------------------------------------------

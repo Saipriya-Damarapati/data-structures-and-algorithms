@@ -1,3 +1,14 @@
 LinkedList in Java
 ---------------------
 * Doubly linked list implementation
+* Implements List and Deque interfaces
+* Non synchronized and not thread safe
+* In case, linkedlist is structurally modified after iterators are created,
+    then they throw ConcurrentModificationException
+* Methods to add at the first and last positions are available (addFirst, addLast)
+* add method adds an element at the end of the list (add is same as addLast)
+* LinkedList by itself is a data structure
+* JDK's linkedlist class extends AbstractSequentialList (which provides few methods implementation)
+* Methods to remove, we have removeFirst and removeLast
+* remove method by default removes the first element in the list
+-------------------------------------------------------------------------------------------------------

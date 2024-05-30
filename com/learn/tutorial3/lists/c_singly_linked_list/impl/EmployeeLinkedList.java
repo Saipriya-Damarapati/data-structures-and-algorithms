@@ -1,5 +1,6 @@
-package com.learn.tutorial3.lists.c_singly_linked_list.pojo;
+package com.learn.tutorial3.lists.c_singly_linked_list.impl;
 
+import com.learn.tutorial3.lists.c_singly_linked_list.pojo.EmployeeNode;
 import com.learn.tutorial3.pojo.Employee;
 
 import java.util.Objects;

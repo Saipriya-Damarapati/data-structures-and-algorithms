@@ -1,0 +1,4 @@
+Lists
+------------
+* List is an Abstract Data Type (ADT)
+* List is not a concrete data structure

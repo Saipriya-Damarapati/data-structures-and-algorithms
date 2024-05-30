@@ -1,0 +1,21 @@
+Quick Sort
+-----------------
+* Divide and conquer algorithm similar to merge sort
+* Recursive algorithm
+* Uses a pivot element to partition the array into two parts
+* Elements < Pivot to its left and Elements > Pivot to its right
+* Pivot will then be in its correct sorted position
+
+* Process is repeated for the left and right sub arrays
+* Eventually, every element has been the pivot, so every element will be in its correct sorted position
+* As with merge sort, we will end up partitioning the array into a series of 1-element arrays
+* Does this in-place (unlike merge sort)
+
+Performance
+---------------
+* In place algorithm
+* Worst case - O(nsquare) quadratic time complexity
+* Average case - O(n logn) logarithmic time complexity
+* Most cases performs better than merge sort
+* Unstable algorithm - because of moving the elements back and forth
+* Choice of pivot can have effect on time compleixty

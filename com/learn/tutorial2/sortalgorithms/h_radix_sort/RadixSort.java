@@ -31,7 +31,7 @@ public class RadixSort {
 
         int[] adjustedCountingArray = new int[radix];
         int sum = 0;
-        for(int i = 1; i < countingArray.length; i++) {
+        for(int i = 0; i < countingArray.length; i++) {
             sum = sum + countingArray[i];
             adjustedCountingArray[i] = sum;
         }

@@ -29,6 +29,8 @@ public class Solution {
             }
         }
         array[i] = newElement;
+        System.out.print("Result after unsortedIndex = " + unSortedIndex + " is processed ==>> ");
+        display(array);
         performInsertionSort(array, ++unSortedIndex);
     }
 

@@ -24,7 +24,7 @@ public class Solution {
         int[] countingArray = new int[radix];
 
         for(String ele : array) {
-            countingArray[getAlphabet(ele, position, radix)]++;
+            countingArray[getAlphabet(ele, position)]++;
         }
 
         int[] adjustedCountingArray = new int[radix];
@@ -36,13 +36,13 @@ public class Solution {
 
         String[] tmp = new String[array.length];
         for(int k = array.length - 1; k >= 0; k--) {
-            tmp[--adjustedCountingArray[getAlphabet(array[k], position, radix)]] = array[k];
+            tmp[--adjustedCountingArray[getAlphabet(array[k], position)]] = array[k];
         }
         System.arraycopy(tmp, 0, array, 0, array.length);
     }
 
-    private static int getAlphabet(String input, int position, int radix) {
-        return input.charAt(input.length() - position) - 97;
+    private static int getAlphabet(String input, int position) {
+        return input.charAt(input.length() - position) - 'a';
     }
 
     private static void display(String[] a) {

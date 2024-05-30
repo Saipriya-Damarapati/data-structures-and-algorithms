@@ -1,0 +1,7 @@
+Vectors:
+----------------------
+* Vector is a ThreadSafe array list; it is Synchronized
+* Synchronization is overhead to the system and it slows down, hence array list was introduced into jdk without synchronization
+* Most of the operations on vector are synchronized (insert, remove, get operations are synchronized)
+* Both array list and vectors return iterator and listIterator, both these iterators are FAIL-FAST iterators
+* In case, array list or vector are structurally modified after iterators are created, then they throw ConcurrentModificationException

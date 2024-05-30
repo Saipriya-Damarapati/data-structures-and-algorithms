@@ -1,0 +1,19 @@
+Linked List:
+----------------------
+* Sequential list of objects, but this is backed by a Node, not array
+* First item in the list is called head of the list
+* Each node will have a data field and a next field
+* Data field will carry the data
+* Next field will carry the link to the next node
+* Last item in the list will point to null, to denote the end of the linked list
+* If we have reference to the head, then we can traverse the entire list
+* In linked list, we always insert the new element at the front of the list
+* Steps to insert a new element: O(1) time complexity
+    # Create a new node
+    # Assign existing head to the next field of the node created in step 1
+    # Assign head to the node created in step 1
+* Steps to delete an element: O(1) time complexity
+    # Assign the head node to a temporary variable 'removedNode'
+    # Assign head to the second node
+    # Return 'removedNode'
+* As long as insertions and deletions are done at the front of the list, they are in constant time

@@ -4,7 +4,7 @@ Lists
 * List is not a concrete data structure like array
     (Array dictates how the data is organized as a continuous block of memory,
         and also every element in the array has to occupy the same amount of memory)
-
+-----------------------------------------------------------------------------------------------------------------------
 Abstract Data Type (ADT)
 --------------------------
 * Does not dictate how data is organized
@@ -12,3 +12,4 @@ Abstract Data Type (ADT)
 * ADT is more about the behaviour not the data itself
 * Concrete data structure is a concrete class
 * Abstract data type is usually a class
+-----------------------------------------------------------------------------------------------------------------------

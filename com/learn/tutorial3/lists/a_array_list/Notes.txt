@@ -1,0 +1,30 @@
+ArrayLists - Backed by an ARRAY
+---------------------------------
+* Resizable array implementation of list interface
+* Default capacity of the array list is 10
+* We can give the custom initial capacity with the help of constructor
+* add method checks the size if is equal to capacity, then it increases the capacity
+* for most of the methods in arraylist, if index is given, time complexity is always 1
+* add(index, value) - adds a new element at the given index and moves the following element by 1 position
+                    - size is increased by 1
+                    - worst case time complexity is O(n)
+* set(index, value) - updates the value of the element at the given index
+                    - updating the value does not impact the size of the list
+* contains method validates the presence of object that is passed as a parameter
+    * by default, equals method validates if the two instances are equal or not
+    * If we want to validate based on fields, we need to override the equals method to compare the fields
+    * we should override hashcode whenever we override equals method
+* now if we had overridden equals method, we can find the indexOf an employee object, because it can match against value
+* removing an element based on index is usually faster than removing element based on value
+* removing element based on value only if we override equals and hashcode
+* time complexity of removing an element from array list is - O(n) in worst case, because need to shift all the elements
+* list.toArray(); returns Object[] array
+* If we want custom return type we should let the compiler know about it.
+    list.toArray(new Employee[list.size]);
+
+Performance:
+* Good for iterating over the list or fetching any element if index is known
+* Not so good for insertion at any position except at the end, elements has to be shifted
+* Not so good for deletion or removals, elements has to be shifted
+* Not good for accessing the elements when we do not have the index
+* In case, array list is structurally modified after iterators are created, then they throw ConcurrentModificationException

@@ -1,0 +1,51 @@
+Doubly Linked List
+-----------------------
+* Each item in the list has next and previous fields
+* The list has a head and a tail
+
+Assume our doubly linked list as
+null  <-  Jane    <=> John    <=> Mary    <=> Mike    <=> Bill -> null
+
+* Insert at head - O(1) complexity
+    # To insert node A, where B is the head
+    # Create a new node A
+    # Assign A's next to B
+    # Assign B's previous to A
+    # Assign A as head
+    # If tail is null, then assign A as tail also
+
+* Insert at tail - O(1) complexity
+    # To insert node A, where B is the tail
+    # Create a new node A
+    # Assign A's previous to B
+    # Assign B's next to A
+    # Assign A as tail
+    # If head is null, then assign A as head also
+
+* Delete from head - O(1) complexity
+    # Assume A is head and B is the following element
+    # Assign A to removedNode
+    # Assign B's previous to A's previous (which is supposed to be null)
+    # Assign head to B, which is A's next field
+    # Return removedNode from the method
+
+* Delete from tail - O(1) complexity
+    # Assign A is the head and B is the previous element
+    # Assign A to removedNode
+    # Assign B's next to A's next (which is supposed to be null)
+    # Assign tail to B, which is A's previous field
+    # Return removedNode from the method
+
+* To insert a node A between nodes B and C
+    # Assign A's next field to B's next field
+    # Assign A's previous field to C's previous field
+    # Assign B's next field to A
+    # Assign C's previous field to A
+    # Best time complexity is O(1); but we have to find the insertion position first, so this is O(n) in worst case
+
+* To remove the node A between A anc C
+    # Assign 'A' to removedNode
+    # Assign C's previous field to A's previous field
+    # Assign B's next field to A's next field
+    # Return A from the method
+    # Best time complexity is O(1); but we have to find the 'A' position first, so this is O(n) in worst case

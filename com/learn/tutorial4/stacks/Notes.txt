@@ -1,0 +1,35 @@
+Stacks
+----------------
+* LIFO - Last In First Out
+* Stack dictates what operations can be performed on the data
+* Hence, Stack is an Abstract Data Type
+* Stack can be backed by any data structure like array or linked list
+* Hence, stack does not dictate how the data is stored
+* Ideal backing data structure: Linked List (Singly Linked List)
+
+* Example:
+    # Paper bunch
+        - add a paper to the bunch, you put on the top
+        - remove a paper from the bunch, you take from the top
+    # Deck of cards
+        - put a new card on the deck, you put on the top
+        - remove a card from the deck, you take from the top
+    # Call stack in recursion
+        - recursive method calls are added to the call stacks
+        - after execution, one after another is removed from the call stack as in LIFO manner
+
+Operations on stack:
+* Push - adds the item on top of the stack
+* Pop - removes the top item from the stack
+* Peek - gets the top item from the stack without removing it
+
+Time complexity:
+* Singly Linked List - O(1) for push, pop and peek
+* For Array, push is O(n) time complexity, becuase if array is full, then array may have to be resized
+* If we know the maximum number of items that will ever be on a stack, then array is a good choice
+* If memory is tight, array is a good choice, we need not have overhead of next field pointing
+* However, linked list is ideal
+
+JDK recommendations:
+* A more complete and consistent set of LIFO operations is provided by the Deque interface and its implementations.
+* For array implementation of stack, we can consider using ArrayDeque implementation

@@ -61,6 +61,7 @@ public class EmployeeDoublyLinkedList {
                 current.setPrevious(newNode);
             }
             current = current.getNext();
+            size++;
         }
         return false;
     }

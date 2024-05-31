@@ -17,7 +17,7 @@ public class Solution {
 
     public static boolean checkForPalindrome(String string) {
         LinkedStack stack = new LinkedStack();
-        StringBuilder original = new StringBuilder();
+        StringBuilder original = new StringBuilder(string.length());
         for(int i = 0; i < string.length(); i++) {
             char letter = string.toLowerCase().charAt(i);
             if(letter >= 'a' && letter <= 'z') {
@@ -25,7 +25,7 @@ public class Solution {
                 original.append(letter);
             }
         }
-        StringBuilder reversed = new StringBuilder();
+        StringBuilder reversed = new StringBuilder(stack.getSize());
         while (!stack.isEmpty()) {
             Character poppedChar = stack.pop();
             reversed.append(poppedChar);

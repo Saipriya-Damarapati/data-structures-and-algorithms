@@ -1,0 +1,56 @@
+Queues
+------------
+* Queues are abstract data types just like stacks
+* They do not dictate how you store the data
+* Dictate on what operations can be performed on the data
+
+* FIFO - First In First Out
+* Like getting in a line
+* add / enqueue - add an item at the end of the queue
+* remove / dequeue - remove an item at the front of the queue
+* peek - get the item at the front of the queue - but do not remove it
+
+* Two popular ways of implementation - Arrays and Linked List
+
+Time Complexity
+* If queue implementation is backed by array implementation
+    # Push - O(n) in worst case - if array resize is done
+    # Push - O(1) in best case - if array resize is not required
+    # Pop - O(n) - elements should be shifted after pop
+    # Peek - O(1)
+* If queue implementation is backed by linked list implementation
+    # Push - O(1) in worst case
+    # Pop - O(1)
+    # Peek - O(1)
+
+|===============|=======================|===========================|
+|   Operation   |   Throws Exception    |   Returns Special Value   |
+|===============|=======================|===========================|
+|   Insert      |       add(e)          |       offer(e)            |
+|   Remove      |       remove()        |       poll()              |
+|   Examine     |       element()       |       peek()              |
+|===============|=======================|===========================|
+
+* Bounded queue has a specific capacity that cannot be exceeded.
+* Unbounded queue's capacity can grow.
+
+* ArrayBlockingQueue
+    # Part of java util collections package
+    # bounded blocking queue backed by an array
+    # classic bounded buffer, in which fixed sized array holds elements inserted by producers and extracted by consumers
+    # once created capacity cannot be changed
+    # attempt to put an element into full queue will result in operation blocking
+    # attempt to take an element from an empty queue will similarly result in operation blocking
+    # used in multi-threading scenarios
+
+* ConcurrentLinkedQueue
+    # Part of java util collections package
+    # unbounded thread safe queue based on link nodes
+    # based on efficient non-blocking algorithm based on one described in
+        Simple, Fast and Practical Non-blocking and blocking concurrent queue algorithms
+    # size method is not a constant time operation
+    # because of asynchronous nature of these queues,
+    # determining current number of elements requires traversal
+    # may report inaccurate results if collection is modified during traversal
+    # iterators are weakly consistent, do not throw ConcurrentModificationException, may proceed with other operations
+

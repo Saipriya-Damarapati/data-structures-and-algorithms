@@ -1,0 +1,8 @@
+Using stack and a queue, determine if a string is a palindrome
+String may contain punctuation and spaces, they should be ignored
+case should be ignored
+
+eg
+"I did, did I?" is a palindrome
+"Racecar" is a palindrome
+"hello" is not a palindrome

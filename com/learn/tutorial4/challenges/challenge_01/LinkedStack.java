@@ -34,15 +34,7 @@ public class LinkedStack {
         return stack.isEmpty();
     }
 
-    public void printStack() {
-        System.out.println("--------------------------------------");
-        /*for(Employee emp : stack) {
-            System.out.println(emp);
-        }*/
-        ListIterator iterator = stack.listIterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
-        System.out.println("--------------------------------------");
+    public int getSize() {
+        return stack.size();
     }
 }

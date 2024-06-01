@@ -1,0 +1,52 @@
+Hashtables
+----------------
+* Abstract Data Type like Stack and Queue
+    # Doesn't dictate how we store the data
+* Hashtables provide access to data using keys
+* When we add a value, provide a key to the value and use this key to retrieve the value back
+* Optimized for retrieval when we know the key
+* For hash tables, the key doesn't have to be an integer
+    # assume for array, the index is the key for any value stored in array
+* For key/value pairs, data types need not match
+* Associative Arrays is one type of hash table
+    # In computer science, an associative array, map, symbol table, or dictionary is
+        - an abstract data type that stores a collection of (key, value) pairs,
+        - such that each possible key appears at most once in the collection.
+    # The index data type for a simple array must be an integer value.
+    # The index type for an associative array can be one of a set of supported data types.
+* they are also called as dictionary
+* keys are hashed into an integer hash code
+
+Hashing
+-----------
+* Maps key of any datatype to an integer
+* Hash function maps keys to int
+* In Java, hash function is Object.hashCode()
+* Collision occurs, when more than one value has the same hashed value
+
+Load Factor
+-----------------
+* Tells us how full a hash table is
+* Load Factor   = no.of items / capacity
+                = size / capacity
+* Load factor is used to decide when to resize the array backing the hash table
+* Don't want load factor to be too low ( means there is lots of empty space )
+* Don't want load factor to be too high ( increases the likelihood of collisions )
+* Load factor plays a role in determining the time complexity for retrieval
+
+Add to a hash table backed by an array
+---------------------------------------
+* Provide a key / value pair
+* Use a hash function to hash the key to an int value
+* Store the value at the hashed key value - this is the index to the array
+
+Example:
+----------
+* Add "Jane Jones" with key of "Jones"
+    # Use a hash function to map "Jones" to an int - let us assume we get the value 4
+    # Store "Jane Jones" at array[4]
+
+Retrieve the employee with the key "Jones"
+    # Use the same hash function to map "Jones" to an int - let us assume we get the value 4
+    # Retrieve the value at array[4] -> "Jane Jones"
+

@@ -18,6 +18,8 @@ public class Solution {
         System.out.println(checkForPalindrome("hello"));
         // should return true
         System.out.println(checkForPalindrome("Don't nod"));
+        // should return false
+        System.out.println(checkForPalindrome("saipriya"));
     }
 
     public static boolean checkForPalindrome(String string) {
@@ -37,7 +39,7 @@ public class Solution {
         System.out.print("Stored in queue as = ");
         queue.stream().forEach(System.out::print);
         System.out.println();
-        for(int i = 0; i < stack.size(); i++) {
+        while (!stack.isEmpty()){
             Character popFromStack = stack.pop();
             Character popFromQueue = queue.remove();
             if(!popFromQueue.equals(popFromStack)) {

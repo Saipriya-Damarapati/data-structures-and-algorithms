@@ -1,0 +1,4 @@
+Open Addressing
+----------------------
+* When we get a hash key corresponding to a value which is already full, we look for some other address to store this element.
+    # this is called open addressing
